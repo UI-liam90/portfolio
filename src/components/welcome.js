@@ -1,35 +1,41 @@
 import React from "react"
 import "./welcome.css"
 
-const Welcome = () => {
-  const WelcomeMessage = () => {
-    let time = new Date();
-    let hour = time.getHours();
-    if(hour >= 0 && hour < 12) {
-      return `Good Morning`
-    } else if(hour >= 12 && hour < 18) {
-      return `Good Afternoon`
-    } else {
-      return `Good evening`
-    }
-  }
-  const NiceMessage = () => {
-    const greetings = [
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      welcome: '',
+      greeting: ''
+    };
+    this.time = new Date();
+    this.hour = this.time.getHours();
+    this.greetings = [
       'How are you Today?',
       'I hope you are having a great day :)',
       'How can I help you on this fine day?'
-    ]
-    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-    return greeting;
+    ];
   }
-  return (
-    <>
-      <h1><WelcomeMessage /></h1>
-      <h2>My Name is Liam Wright</h2>
-      <h3><NiceMessage /></h3>
-    </>
-  );
+  
+  // if(this.hour >= 0 && this.hour < 12) {
+  //   setWelcome('Good Morning');
+  // } else if(hour >= 12 && hour < 18) {
+  //   setWelcome('Good Afternoon');
+  // } else {
+  //   setWelcome('Good Evenng');
+  // }
+  
+  // setGreeting(greetings[Math.floor(Math.random() * greetings.length)]);
+
+  render() {
+    return (
+      <>
+        <h1>{this.state.welcome}</h1>
+        <h2>My Name is Liam Wright</h2>
+        <h3>{this.state.greeting}</h3>
+      </>
+    )
+  };
 }
 
 export default Welcome
