@@ -1,14 +1,14 @@
 h1 {
-  animation: load-in 250ms ease-in 100ms 1 normal forwards;
+  animation: load-in 500ms ease-in 250ms 1 normal forwards;
   opacity: 0;
 }
 h2 {
-  animation: load-in 250ms ease-in 250ms 1 normal forwards;
+  animation: load-in 250ms ease-in 500ms 1 normal forwards;
   opacity: 0;
 }
 
 h3 {
-  animation: load-in 250ms ease-in 500ms 1 normal forwards;
+  animation: load-in 250ms ease-in 750ms 1 normal forwards;
   opacity: 0;
 }
 
