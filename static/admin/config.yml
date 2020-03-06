@@ -10,7 +10,7 @@ media_folder_relative: true
 collections:
   - name: portfolio-site
     label: Portfolio Site
-    folder: portfolio-site
+    folder: src/pages/portfolio-site
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "potfolioSiteTemplate"}
